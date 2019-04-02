@@ -1,0 +1,8 @@
+################################################################################
+# This is application Yml file used for continent assignment                                                                    #
+################################################################################
+
+ ################### Liquibase scripts########
+liquibase:
+  change-log: classpath:/db/changelog/db.changelog-master.xml
+

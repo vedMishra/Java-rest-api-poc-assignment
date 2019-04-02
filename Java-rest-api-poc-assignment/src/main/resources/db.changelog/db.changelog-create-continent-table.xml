@@ -1,0 +1,30 @@
+<databaseChangeLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <changeSet id="continent" author="vedMishra" dbms="postgresql">
+        <createTable tableName="CONTINENT">
+            <column autoIncrement="true" name="ID" type="bigint">
+                <constraints primaryKey="true" primaryKeyName="pk_continent"/>
+            </column>
+            <column name="continent" type="character varying(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="countries" type="bytea">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_by" type="character varying(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_date" type="timestamp without time zone">
+                <constraints nullable="false"/>
+            </column>
+            <column name="updated_by" type="character varying(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="updated_date" type="timestamp without time zone">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+    </changeSet>
+</databaseChangeLog>

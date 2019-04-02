@@ -1,0 +1,63 @@
+//import org.gradle.api.tasks.testing.logging.TestExceptionFormat
+//import org.gradle.api.tasks.testing.logging.TestLogEvent
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.5.2.RELEASE")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: "jacoco"
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'org.springframework.boot'
+
+
+jar {
+    baseName = 'gs-rest-service'
+    version =  '0.1.0'
+}
+
+/*tasks.withType(Test) {
+    testLogging {
+        events TestLogEvent.FAILED,
+               TestLogEvent.PASSED,
+               TestLogEvent.SKIPPED,
+               TestLogEvent.STANDARD_ERROR,
+               TestLogEvent.STANDARD_OUT
+        exceptionFormat TestExceptionFormat.FULL
+        showCauses true
+        showExceptions true
+        showStackTraces true
+    }
+}*/
+
+jacocoTestReport {
+    reports {
+        xml.enabled true
+        html.enabled false
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+    compile("org.springframework.boot:spring-boot-starter-web")
+    testCompile('org.springframework.boot:spring-boot-starter-test')
+    testCompile('junit:junit:4.12')
+    compile ('com.googlecode.json-simple:json-simple:1.1.1')
+    compile("org.springframework.boot:spring-boot-starter-logging")
+    // Liquibase Dependencies
+   // compile("org.liquibase:liquibase-core")
+    //compile('org.postgresql:postgresql')
+
+}

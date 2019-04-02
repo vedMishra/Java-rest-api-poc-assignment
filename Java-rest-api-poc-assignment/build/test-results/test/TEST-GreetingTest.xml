@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="GreetingTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-04-02T22:18:18" hostname="INLT1392" time="0.246">
+  <properties/>
+  <testcase name="greetingExpression" classname="GreetingTest" time="0.246"/>
+  <system-out><![CDATA[03:48:19.029 [Test worker] ERROR app.controller.FlagPickerController - Exception in calling getCountries 
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

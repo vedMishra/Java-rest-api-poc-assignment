@@ -6,7 +6,7 @@ import org.junit.*;
 
 public class ControllerTest {
   @Test
-  public void greetingExpression() {
+  public void TestAPI() {
     FlagPickerController flagPickerController = new FlagPickerController();
     String result = flagPickerController.getCountries("Asia");
     boolean check = result.contains("Asia");

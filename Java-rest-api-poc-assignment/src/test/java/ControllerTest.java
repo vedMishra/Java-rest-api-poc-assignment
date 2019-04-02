@@ -4,7 +4,7 @@ import app.controller.FlagPickerController;
 import org.junit.*;
 
 
-public class GreetingTest {
+public class ControllerTest {
   @Test
   public void greetingExpression() {
     FlagPickerController flagPickerController = new FlagPickerController();
